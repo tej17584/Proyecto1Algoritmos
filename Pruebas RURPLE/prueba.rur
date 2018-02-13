@@ -1,0 +1,24 @@
+#definimos un método para que siga buscando a la derecga
+def camino():
+    while not front_is_clear():#mientras el frente este libre
+        turn_left()#que gire a la izquierda
+    move()
+#si el frente esta libre el robot SIGUE pero delo contrario gira  a la izquierda
+def turn_right():
+    repeat(turn_left, 3)
+def seguir_pared():
+    if right_is_clear(): #si la derecha esta libre que gire
+        turn_right()#se gira a la derecha
+        move()#se mueve
+    elif front_is_clear(): #si el frente esta libre
+        move()#se mueve
+    else: 
+        turn_left()#de lo contrario se gira
+
+obsBeeper = next_to_a_beeper#si encuentra el beeper que pare
+#Aqui comienza el algoritmo
+#Zona de métodos encliclados
+camino()#llamamos a la funcion principal
+while not obsBeeper(): #mientras no haya beeper
+    seguir_pared()#seguir pared
+turn_off()#que se apague si lo encuentra
