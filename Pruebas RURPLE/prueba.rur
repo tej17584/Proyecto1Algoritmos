@@ -1,4 +1,4 @@
-#definimos un método para que siga buscando a la derecga
+#definimos un método para que siga buscando a la derecha
 def camino():
     while not front_is_clear():#mientras el frente este libre
         turn_left()#que gire a la izquierda
