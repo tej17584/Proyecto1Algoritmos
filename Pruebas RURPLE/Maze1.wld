@@ -1,6 +1,6 @@
 avenues = 10
 streets = 10
-robot = (2, 6, 'N', 0)
+robot = (1, 1, 'E', 0)
 walls = [
     (10, 1), 
     (10, 3), 
